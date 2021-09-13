@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>검색창</title>
+	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Open+Sans" rel="stylesheet">
+	<style>
+	.fontstyle {
+		font-family: 'Do Hyeon', sans-serif;
+		text-align: center;
+	}
+
+	</style>
+	<script>
+	var down = false;
+	function search(){
+		var Key = document.getElementById("Keyword").value;
+		
+		location.href = Key+"검색.html";
+	}
+	function goKey(Key){
+		location.href = Key+"검색.html";
+	}
+	function row(){
+		if(!down){
+			document.getElementById("f_div").style.fontSize = "10px";
+			document.getElementById("f_div").style.height = "190px";
+			document.getElementById("f_div").style.border = "0.5px solid black";
+			document.getElementById("s_div").style.fontSize = "15px";
+			document.getElementById("s_div").style.height = "25px";
+			document.getElementById("arrow").innerHTML = "▲"
+		}
+		else{
+			document.getElementById("f_div").style.fontSize = "0px";
+			document.getElementById("f_div").style.height = "0px";
+			document.getElementById("f_div").style.border = "0px";
+			document.getElementById("s_div").style.fontSize = "0px";
+			document.getElementById("s_div").style.height = "0px";
+			document.getElementById("arrow").innerHTML = "▼"
+		}
+		down = !down;
+	}
+	</script>
+</head>
+<body class='fontstyle'>
+<a href="구글.html" target="_self">
+<img src='..\data\img\구글.png' width='480px' height='176px' style="margin-top:200px">
+</a>
+<div style='border:1px solid black;width:400px; height=50px;padding:0px; margin:auto'>
+<input type = "text" id = "Keyword" style = "border:0px;width:350px;height:30px;font-size:20px">
+<img src='..\data\img\돋보기.jpg' width='25px' height='25px' style='float:right;'  onclick = "search()">
+<span id = "arrow" onclick="row()" style = "float:right;font-size:20px">▼</span>
+</div>
+<div id = "f_div" style = 'border:0px; width:390px; height:0px;font-size:0px;margin:auto;text-align:left'>
+<div id = "s_div" style = "background-color:lightgray;height:0px;font-size:0px;">
+검색어
+</div>
+<div onclick = 'goKey("고구마돈까스")'>고구마돈까스</div>
+<div onclick = 'goKey("까르보나라치킨까스")'>까르보나라치킨까스</div>
+<div onclick = 'goKey("돈까스")'>돈까스</div>
+<div onclick = 'goKey("새우까스")'>새우까스</div>
+<div onclick = 'goKey("생선까스")'>생선까스</div>
+<div onclick = 'goKey("오징어까스")'>오징어까스</div>
+<div onclick = 'goKey("치즈돈까스")'>치즈돈까스</div>
+<div onclick = 'goKey("치즈생선까스")'>치즈생선까스</div>
+<div onclick = 'goKey("치킨까스")'>치킨까스</div>
+<div onclick = 'goKey("카레돈까스")'>카레돈까스</div>
+<div onclick = 'goKey("카레치킨까스")'>카레치킨까스</div>
+<div onclick = 'goKey("피카츄돈까스")'>피카츄돈까스</div>
+</div>
+</body>
+</html>

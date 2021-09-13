@@ -1,0 +1,264 @@
+﻿﻿<DOCTYPE!>
+<html>
+
+<head>
+	<title>"돈좋사"</title>
+	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Open+Sans" rel="stylesheet">
+	<style>
+	.fontstyle {
+		font-family: 'Do Hyeon', sans-serif;
+		text-align: center;
+	}
+	.fontstyle_NanumGothic {
+		font-family: 'Nanum Gothic', sans-serif;
+		text-align: left;
+	}
+	.header {
+		width: 100%;
+		height: 200px;
+		padding-top:100px;
+		margin: 0px;
+		background-image: url(..\\data\\img\\header.jpg);
+		background-position: center;
+		background-size: cover;
+	}
+
+	.menu {
+		float: center;
+	}
+	.menu li {
+		width: 150px;
+		height: 50px;
+		position: center;
+		list-style: none;
+		color: white;
+		padding: 10px 20px;
+		padding-top: 32px;
+		margin: 10px 20px;
+		display: inline-block;
+		background-color: black;
+		border-radius: 5px;
+	}
+	.menu li:hover {
+		color: red;
+		transform: scale(1.2);
+		transition: all 0.3s ease-in-out;
+	}
+	article h1 {
+		font-size: 50px;
+	}
+	td img {
+		width: 400px;
+		height: 300px;
+		
+	}
+	.button_map {
+		width:50px; height:50px;
+
+	}
+	.button_map:hover {
+		transform: scale(1.2);
+	}	
+
+	</style>
+	<script>
+		function gotoMain(){location.href="main(로그인 후).html";}
+	</script>
+</head>
+
+<body class="fontstyle" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0" style="background-color: #f1fff1;">
+	<header>
+	<div style = "text-align:right; padding-right: 10px;"><a href = "../main.html" target = "_self"><img src="..\data\img\logout.png" width="80px" height="40px"></a></div><br>
+	<div class= "header" style="font-size:100px; color:white;" onclick = "gotoMain()">돈좋사</div>
+	</header>
+	
+	
+	<nav>
+		<div class="menu" style="font-size: 20px;">
+			<ul>
+				<a href="소개.html" target="_self"><li>INTRODUCE</li></a>
+				<a href="돈까스.html" target="_self"><li>TYPES</li></a>
+				<a href="맛집.html" target="_self"><li>RESTAURANTS</li></a>		
+			</ul>
+		</div>
+	</nav>
+
+	<section>
+		<!-- 서울 맛집 지도 -->
+		<article style="background-color: RGB(231, 232, 234);">
+			<h2 style="padding-top: 20px;">Map of the pork cutlet restaurant in Seoul</h2>
+			<hr align="center" size="2" width="160px" color="#74b49b" noshade="noshade">
+			<center>
+
+			<table border="0" style="background-image: url(..\\data\\img\\seoul.jpg); background-size: 100% 100%; width: 700px; height: 500px;" >
+				<tbody>
+					<tr>
+						<td><a href = "#마포구"><input type="image" src="..\data\img\button_map.png" class="button_map" style="position: relative; left: 220px; top:5px;" ></a><a href = "#종로구"><input type="image" src="..\data\img\button_map_jongno.png" class="button_map" style="position: relative; left: 270px; bottom: 50px;" ></a><a href = "#강남구"><input type="image" src="..\data\img\button_map_gangnam.png" class="button_map" style="position: relative; left: 340px; top:120px;" ></a></td>
+					</tr>
+				</tbody>
+			</table>
+			</center>
+		</article>
+		<!-- 소개 -->
+
+<a href = "#마포구"><input type="image" src="..\data\img\button_map.png" class="button_map" style="position: fixed; left: 50px; top:45%;" ></a>
+<a href = "#종로구"><input type="image" src="..\data\img\button_map_jongno.png" class="button_map" style="position: fixed; left:50px; top: 50%;" ></a>
+<a href = "#강남구"><input type="image" src="..\data\img\button_map_gangnam.png" class="button_map" style="position: fixed; left: 50px; top:55%;" ></a>
+
+		<article style = "background-color: #d2e1c8; padding-top: 50px; padding-bottom: 50px;">
+			<h1><a id="마포구">혼카츠</a></h1>
+			<h2><i>' 홍대 맛집 치즈까스로 유명한 수제 돈까스 전문점 '</i></h2>
+			<center>
+			<table style="margin: auto;">
+				<table border="0">
+				<tbody>
+					<tr align="center">
+						<td style="width: 500px; height: 300px;"><img src="..\data\img\혼카츠.jpg" alt="error" title="혼카츠 리뷰"></td>
+						<td><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.1042896295858!2d126.91983011562962!3d37.55260663268273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c98c4d300097b%3A0xa1fad1867fe111f!2z7Zi86rCA7Lig!5e0!3m2!1sko!2skr!4v1540570800835" width="500" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></td>
+					</tr>
+					<tr align="center">
+						<td>클릭하면 리뷰!</td><td></td>
+					</tr>
+					<tr align="center">
+						<td colspan="2" style="font-size: 20px;"><br>Tel. 02 - 322 - 8850<br>
+						Adress. 서울 마포구 와우산로21길 36-6 </td>
+					</tr>
+					<tr align="center">
+						<td colspan="2"><br>치즈돈까스 9,500원  |  왕돈까스 8,500원<br>
+						매운돈까스 7,500원  |  나가사끼라멘 7,500원</td>
+					</tr>
+				</tbody>
+			</table>
+			<h1>독립카츠</a></h1>
+			<h2><i>' 연남 돈까스 부위마다 다양한 연트럴파크 맛집 '</i></h2>
+			<table style="margin: auto;">
+				<table border="0">
+				<tbody>
+					<tr align="center">
+						<td style="width: 500px; height: 300px;"><img src="..\data\img\독립카츠.jpg" alt="error" title="독립카츠 리뷰"></td>
+						<td><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.7350049633333!2d126.92016081523893!3d37.56130667979891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c98e8870b442f%3A0xc4c47b337f52aefa!2z64-F66a97Lm07Lig!5e0!3m2!1sko!2skr!4v1542947445429" width="500" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></td>
+					</tr>
+					<tr align="center">
+						<td>클릭하면 리뷰!</td><td></td>
+					</tr>
+					<tr align="center">
+						<td colspan="2" style="font-size: 20px;"><br>Tel. 02-333-1574<br>
+						Adress. 서울 마포구 연남로 19 </td>
+					</tr>
+					<tr align="center">
+						<td colspan="2"><br>모듬돈카츠 14,000원</td>
+					</tr>
+				</tbody>
+			</table>
+			</center>
+		</article>
+		<article style="background-color: #fee4a6; padding-top: 50px; padding-bottom: 50px;">
+			<h1><a id="종로구">정돈</a></h1>
+			<h2><i>' 수요미식회가 추천한 돈까스 맛집'</i></h2>
+			<center>
+			<table style="margin: auto;">
+				<table border="0">
+				<tbody>
+					<tr align="center">
+						<td style="width: 500px; height: 300px;"><img src="..\data\img\정돈.jpg" alt="error" title="정돈 리뷰"></td>
+						<td><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.866067012134!2d126.99894641574225!3d37.58177137979508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca32be825f7d5%3A0xd3f96288baf4f121!2z7KCV64-I!5e0!3m2!1sko!2skr!4v1540774859004" width="500" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></td>
+					</tr>
+					<tr align="center">
+						<td>클릭하면 리뷰!</td><td></td>
+					</tr>
+					<tr align="center">
+						<td colspan="2" style="font-size: 20px;"><br>Tel. 02 - 987 - 0924<br>
+						Adress. 서울 종로구 대학로9길 12 </td>
+					</tr>
+					<tr align="center">
+						<td colspan="2"><br>등심돈까스 12,000원  |  안심돈까스 13,000원<br>
+						등심+안심돈까스 1,6000원  |  스페셜 등심돈까스 15,000원</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h1>서촌길돈까스</h1>
+			<h2><i>' 수제 갈릭돈까스를 파는 곳 '</i></h2>
+			<center>
+			<table style="margin: auto;">
+				<table border="0">
+				<tbody>
+					<tr align="center">
+						<td style="width: 500px; height: 300px;"><img src="..\data\img\서촌길돈까스.jpg" alt="error" title="서촌길돈까스 리뷰"></td>
+						<td><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.0411251912387!2d126.9696543152393!3d37.57764927979584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2958bf1861f%3A0x23397c3cafdeda1a!2z7ISc7LSM6ri464-I6rmM7Iqk!5e0!3m2!1sko!2skr!4v1542948344057" width="500" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></td>
+					</tr>
+					<tr align="center">
+						<td>클릭하면 리뷰!</td><td></td>
+					</tr>
+					<tr align="center">
+						<td colspan="2" style="font-size: 20px;"><br>Tel. 02-737-8084<br>
+						Adress. 서울 종로구 자하문로 17-2 </td>
+					</tr>
+					<tr align="center">
+						<td colspan="2"><br>서촌길수제돈까스 8,500원  |  수제오븐치즈돈까스 9,500원<br>
+						수제갈릭돈까스 9,000원</td>
+					</tr>
+				</tbody>
+			</table>
+			</center>
+		</article>
+		<article style = "background-color: #eeeeee; padding-top: 50px; padding-bottom: 50px;">
+			<h1><a id="강남구">이끼롤까스</a></h1>
+			<h2><i>' 특별 수제 롤돈까스를 맛볼 수 있는 곳 '</i></h2>
+			<center>
+			<table style="margin: auto;">
+				<table border="0">
+				<tbody>
+					<tr align="center">
+						<td style="width: 500px; height: 300px;"><img src="..\data\img\이끼롤까스.jpg" alt="error" title="이끼롤까스 리뷰"></td>
+						<td><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202490.61296417678!2d126.83169549565368!3d37.53348141698049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3ebe43eb47f%3A0x41beda41948546a7!2z7J2064G866Gk6rmM7IqkKOqwgOuhnOyImOq4uOygkCk!5e0!3m2!1sko!2skr!4v1542949049952" width="500" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></td>
+					</tr>
+					<tr align="center">
+						<td>클릭하면 리뷰!</td><td></td>
+					</tr>
+					<tr align="center">
+						<td colspan="2" style="font-size: 20px;"><br>Tel. 02-514-3347<br>
+						Adress. 서울 강남구 강남대로156길 35 </td>
+					</tr>
+					<tr align="center">
+						<td colspan="2"><br>치킨치즈롤까스 12,000원  |  고구마치즈돈까스 12,000원<br>
+						버섯치즈롤까스 12,500원  | 날치알치즈롤까스 12,500원</td>
+					</tr>
+				</tbody>
+			</table>
+			<h1>낭만식당</a></h1>
+			<h2><i>' 논현동에 정말맛있는 돈까스맛집 '</i></h2>
+			<table style="margin: auto;">
+				<table border="0">
+				<tbody>
+					<tr align="center">
+						<td style="width: 500px; height: 300px;"><img src="..\data\img\낭만식당.jpg" alt="error" title="낭만식당 리뷰"></td>
+						<td><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50637.11463752825!2d126.99708036445308!3d37.51217123071934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca40ab6bb76e7%3A0xf2f25adeb39ac3d5!2z64Kt66eM7Iud64u5!5e0!3m2!1sko!2skr!4v1542949284424" width="500" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></td>
+					</tr>
+					<tr align="center">
+						<td>클릭하면 리뷰!</td><td></td>
+					</tr>
+					<tr align="center">
+						<td colspan="2" style="font-size: 20px;"><br>Tel. 02-517-7471<br>
+						Adress. 서울 강남구 선릉로127길 7 </td>
+					</tr>
+					<tr align="center">
+						<td colspan="2"><br>함박스테이크 10,000원  |  치킨까스 9,000원<br>
+						돈까스 9,000원  | 카레돈까스 10,000원</td>
+					</tr>
+				</tbody>
+			</table>
+			</center>
+		</article>
+	</section>
+
+	<footer class = "fontstyle_NanumGothic" style="background-color: #474a56; width: 100%; height: 200px; padding: 30px;">
+		<h5>Privacy Statement | Legal Notice | Privacy Policy</h5>
+		<hr align="left" size="0.5" width="310px" noshade="noshade">
+		209, Neungdong-ro, Gwangjin-gu, Seoul-si, Korea. Tel / +82-02-3408-3114<br>
+		Copyright&copy 2018 DICON All Rights Reserved.
+	</footer>
+	
+</body>
+
+</html>

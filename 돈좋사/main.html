@@ -1,0 +1,145 @@
+﻿<DOCTYPE!>
+<html>
+
+<head>
+	<title>"돈좋사"</title>
+	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Open+Sans" rel="stylesheet">
+	<style>
+	.fontstyle {
+		font-family: 'Do Hyeon', sans-serif;
+		text-align: center;
+	}
+	.fontstyle_NanumGothic {
+		font-family: 'Nanum Gothic', sans-serif;
+		text-align: left;
+	}
+	.fontstyle_Roboto {
+		font-family: 'Roboto', sans-serif;
+		color: white;
+		text-align: left;
+	}
+	.header {
+		width: 100%;
+		height: 200px;
+		padding-top:100px;
+		margin: 0 auto;
+		background-image: url(data\\img\\header.jpg);;
+		background-position: center;
+		background-size: cover;
+	}
+
+	.menu {
+		float: center;
+	}
+	.menu li {
+		width: 150px;
+		height: 50px;
+		position: center;
+		list-style: none;
+		color: white;
+		padding: 10px 20px;
+		padding-top: 32px;
+		margin: 10px 20px;
+		display: inline-block;
+		background-color: black;
+		border-radius: 5px;
+	}
+	.menu li:hover {
+		color: red;
+		transform: scale(1.2);
+		transition: all 0.3s ease-in-out;
+	}
+	article h1 {
+		font-size: 50px;
+	}
+	td img {
+		width: 300px;
+		height: 300px;
+		
+	}
+
+	</style>
+	<script>
+		function plzLogIn(){alert("로그인이 필요합니다.");}
+		function gotoMain(){location.href="main.html";}
+	</script>
+</head>
+
+<body class="fontstyle" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0" style="background-color: #f1fff1;">
+	<header>
+	<br><div style = "text-align:right; padding-right: 10px;"><a href = "html\회원가입.html" target = "_self"><img src="data\img\join.png" width="80px" height="40px"></a><a href="html\로그인.html" target="_self"><img src="data\img\login.png" width="80px" height="40px"></a></div><br>
+	<div class= "header" style="font-size:100px; color:white;" onclick = "gotoMain()">돈좋사</div>
+	</header>
+	
+	
+	<nav>
+		<div class="menu" style="font-size: 20px;">
+			<ul>
+				<li onclick = "plzLogIn()">INTRODUCE</li>
+				<li onclick = "plzLogIn()">TYPES</li>
+				<li onclick = "plzLogIn()">RESTAURANTS</li>		
+			</ul>
+		</div>
+	</nav>
+	<section style="background-image: url(data\\img\\돈까스.jpg); background-position: center; background-size: cover; width: 100%; height: 500px; margin-top:50px;" class = "fontstyle_Roboto">
+		<div style=" padding-left: 60px; padding-top: 100px; font-size: 50px;">The pork cutlet is the best food in the universe.</div>	
+		<div style=" padding-left: 130px; padding-top: 100px; font-size: 30px;">Once you taste it, you'll become addicted.</div>
+	</section>
+
+	<a href="review.html" target="_blank">
+	<section class="fontstyle_NanumGothic" style="margin-top: 100px; margin-bottom: 80px;">
+		<center>
+		<table border="0" style="border-collapse: collapse; width: 100px; height: 100px;">
+			<caption style="font-size: 40px; margin-bottom: 10px;">GALLERY</caption>
+				
+				<tbody>
+				<tr>
+					<td><img src="data\img\돈까스1.jpg"></td>
+					<td><img src="data\img\돈까스2.jpg"></td>
+					<td><img src="data\img\돈까스3.jpg"></td>
+				</tr>
+				<tr>
+					<td><img src="data\img\돈까스4.jpg"></td>
+					<td><img src="data\img\돈까스5.jpg"></td>
+					<td><img src="data\img\돈까스6.jpg"></td>
+				</tr>
+			</tbody>
+		</table>
+		
+		</center>
+	</section>
+	</a>
+	<footer class = "fontstyle_NanumGothic" style="background-color: #474a56; width: 100%; height: 200px; padding: 30px;">
+		<h5>Privacy Statement | Legal Notice | Privacy Policy</h5>
+		<hr align="left" size="0.5" width="310px" noshade="noshade">
+		209, Neungdong-ro, Gwangjin-gu, Seoul-si, Korea. Tel / +82-02-3408-3114<br>
+		Copyright&copy 2018 DICON All Rights Reserved.
+	</footer>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

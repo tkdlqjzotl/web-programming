@@ -1,0 +1,128 @@
+﻿<DOCTYPE!>
+<html>
+
+<head>
+	<title>"돈좋사"</title>
+	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Open+Sans" rel="stylesheet">
+	<style>
+	.fontstyle {
+		font-family: 'Do Hyeon', sans-serif;
+		text-align: center;
+	}
+	.header {
+		width: 100%;
+		height: 200px;
+		padding-top:100px;
+		margin: 0 auto;
+		background-image: url(..\\data\\img\\header.jpg);;
+		background-position: center;
+		background-size: cover;
+	}
+
+	.menu {
+		float: center;
+	}
+	.menu li {
+		width: 150px;
+		height: 50px;
+		position: center;
+		list-style: none;
+		color: white;
+		padding: 10px 20px;
+		padding-top: 32px;
+		margin: 10px 20px;
+		display: inline-block;
+		background-color: black;
+		border-radius: 10px;
+	}
+	.menu li:hover {
+		color: red;
+		transform: scale(1.2);
+		transition: all 0.3s ease-in-out;
+	}
+	article h1 {
+		font-size: 50px;
+	}
+	td img {
+		width: 400px;
+		height: 300px;
+
+	</style>
+	<script>
+		function gotoMain(){location.href = "../main.html";}
+		function allChecked(){
+			var all = document.getElementById("all").checked;
+			for(var i = 0; i <= 8; i++){
+				document.getElementById("box" + i).checked = all;
+			}
+		}
+	</script>
+</head>
+
+<body class="fontstyle" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0" style="background-color: #f1fff1;">
+	<header>
+	<div class= "header" style="font-size:100px; color:white;" onclick="gotoMain()">돈좋사</div>
+	</header>
+	
+	<form>
+	<center>
+	<div style = "margin-top: 50px; padding: 50px; width:60%;height:550px; text-align: left;">
+	<div style="border: 2px solid gray; text-align: center;"><h1>선택사항</h1><h4>돈좋사 가입을 위한 정보를 입력해주세요</h4></div>
+		<h2>좋아하는 돈가스는? (중복가능)</h2>
+		<input type = "checkbox" id = "all" name = "전체" value = "전체" onclick = "allChecked()"> 전체선택<br>
+		<input type = "checkbox" id = "box0" name = "일식" value = "일식"> 일식 돈가스
+		<input type = "checkbox" id = "box1" name = "치즈" value = "치즈"> 치즈 돈가스
+		<input type = "checkbox" id = "box2" name = "고구마" value = "고구마"> 고구마 돈가스
+		<input type = "checkbox" id = "box3" name = "고구마치즈" value = "고구마치즈"> 고구마 치즈 돈가스<br>
+		<input type = "checkbox" id = "box4" name = "생선" value = "생선"> 생선
+		<input type = "checkbox" id = "box5" name = "치킨" value = "치킨"> 치킨
+		<input type = "checkbox" id = "box6" name = "비프가스" value = "비프가스"> 비프가스
+		<input type = "checkbox" id = "box7" name = "콩까스" value = "콩까스"> 콩까스
+		<input type = "checkbox" id = "box8" name = "피카츄" value = "피카츄"> 피카츄
+		<br>
+		<h2><p>돈가스 먹는 주기(일)<br><input type = "number" name = "num" min = "0" max = 365" value = "1" style="width:70%; height: 50px; padding-left: 10px;"></p></h2>
+		<h2><p>마지막으로 간 돈가스 음식점<br><input type = "text" name = "restaurant" size = "40" placeholder = "마지막으로 가본 돈가스집은?"style="padding-left: 10px; width:70%; height: 50px;"></p>
+		방문 날짜<br><input type = "date" name = "date" style="width:70%; height: 50px; padding-left: 10px;"></h2>
+		<h2>위의 음식점 맛 평가점수</h2>
+		<input type = "radio" name = "최하" value = "verylow">굉장히 맛없었다.
+		<input type = "radio" name = "하" value = "low">맛없었다.<br>
+		<input type = "radio" name = "중" value = "soso">그냥 그랬다.
+		<input type = "radio" name = "상" value = "high">맛있었다.
+		<input type = "radio" name = "최상" value = "veryhigh">굉장히 맛있었다.
+		<br>
+		<h2>내 최애 돈가스 음식점<h2><input type = "text" name = "favorite" size = "40" placeholder = "추천해주세요~" style="width:70%; height: 50px; padding-left: 10px;"></p>
+		<center>
+		<input class="fontstyle" type = "button" value = "제출" onclick="gotoMain()" style="width: 100px; height: 50px; border: 0px; background-color: lightgreen; font-size: 20px;">
+		<input class="fontstyle" type = "button" value = "건너뛰기" onclick="gotoMain()"style="width: 100px; height: 50px; border: 0px; background-color: lightgreen; font-size: 20px;">
+		</center>
+	</form>
+	</div>
+	</center>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

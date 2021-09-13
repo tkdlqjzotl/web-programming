@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.header {
+      width: 100%;
+      height: 200px;
+      padding-top:100px;
+      text-align:left;
+      background-image: url(reviewdata\\img\\header.jpg);
+      background-position: center;
+      background-size: cover;
+      color:white;
+ }
+</style>
+<script>
+var plusnbnum=0;
+function plusnb() /* plusneighborhood의 준말로 이웃추가,이웃의 div를 클릭하면 이웃추가,끊기의 기능을 수행한다*/
+{
+   if(plusnbnum==0)
+{
+var ans=confirm("이웃하시겠습니까?");
+if(ans==true)
+{
+plusnbnum++;
+document.getElementById("pbb").style.borderColor='white';
+document.getElementById("pbb").style.color='white';
+document.getElementById("pbb").innerHTML='이웃';
+}
+}
+   else{
+var ans2=confirm("이웃을 끊으시겠습니까?");
+if(ans2==true)
+{
+document.getElementById("pbb").style.borderColor='green';
+document.getElementById("pbb").style.color='green';
+document.getElementById("pbb").innerHTML='+이웃추가';
+plusnbnum--;
+}
+}      
+}
+function goReserv()/* 예약버튼을 누르면 밑으로 예약에 대한 정보를 넣을수 있는 형식을 보여준다*/
+{
+   var reservDiv = document.getElementById("rsv").style;
+   if(reservDiv.display == "none")
+      reservDiv.display = "block";
+   else
+      reservDiv.display = "none";
+}
+function reservation()/* 예약한 정보가 맞는지 확인시켜준다.*/
+{
+var ans3=confirm('인원 : '+document.getElementById('rsvpeo').value+'명, ' + '시각 : '+document.getElementById('rsvtime').value+' 맞습니까?');
+if(ans3==true)
+{alert('예약완료');}
+}
+var heartnum= [];
+function heart(num) /* 좋아요 버튼을 누르면 하트가채워지고 숫자도 올라간다 다시누르면 원래의 상태로 간다*/
+{
+while(heartnum.length < (num+1)) heartnum.push(0);
+if(heartnum[num]==0)
+{
+var ans=confirm("좋아요 누르시겠습니까?");
+if(ans==true)
+{
+heartnum[num]++;
+document.getElementById("heart"+num).src='reviewdata\\img\\heart.png';
+document.getElementById("hn"+num).innerHTML="1";
+document.getElementById("hn"+num).style.color="red";
+}
+}
+else{
+var ans2=confirm("좋아요를 취소하시겠습니까?");
+if(ans2==true)
+{
+document.getElementById("heart"+num).src='reviewdata\\img\\heart-empty.png';
+document.getElementById("hn"+num).innerHTML="0";
+document.getElementById("hn"+num).style.color="black";
+heartnum[num]--;
+}
+}     
+}
+var donby =["reviewdata\\img\\돈까스1.jpg","reviewdata\\img\\돈까스2.jpg","reviewdata\\img\\돈까스3.jpg","reviewdata\\img\\돈까스4.jpg","reviewdata\\img\\돈까스5.jpg","reviewdata\\img\\돈까스6.jpg"];
+var imgIdx = 1;
+function left() /*갤러리 비슷한 기능, 6개의 사진을 배열로 저장해놓고 4장의 사진만 보여준다. 화살표 왼쪽을 누르면 모든 사진들이 한단계 낮은 인덱스의 사진을 보여준다.*/
+{
+   imgIdx = (imgIdx + 5)%6;
+   for(var i = 0; i < 4; i++)
+      document.getElementById("img"+i).src = donby[(imgIdx+i)%6];   
+}
+function right()/*갤러리 비슷한 기능, 6개의 사진을 배열로 저장해놓고 4장의 사진만 보여준다. 화살표 오른쪽을 누르면 모든 사진들이 한단계 높은 인덱스의 사진을 보여준다.*/
+{
+   imgIdx = (imgIdx + 1) %6;
+   for(var i = 0; i < 4; i++)
+      document.getElementById("img"+i).src = donby[(imgIdx+i)%6];
+}
+var num = 1;
+var divH = 320;
+function reply()/* 댓글기능, 닉네임 비밀번호 내용을 적어서 버튼을누르면 닉네임과 내용과 쓴 날짜를 추가해줍니다 */
+{
+   var rep = document.getElementById("reply");
+   var nn = document.getElementById("nn").value;
+   var rp = document.getElementById("rp").value;
+   var now = new Date();
+   if(nn == "" || rp =="") alert("닉네임과 내용은 필수입니다.");
+   else{
+   num++;
+   divH += 160;
+   rep.style.height = divH+"px";
+   rep.innerHTML += '<hr align =' + "center" + '></hr>' + "<img src=" + ' "reviewdata\\img\\unknown.png" ' +  "width=" + ' "50px" ' + " height= " + ' "50px" '+ ">"
+         + nn + '<p>' + rp + '</p>'
+         +'<button type=' + "'button'" + 'onclick=' +"'heart(" + num + ")'" + 'style=' +"float:right;background-color:white;" +'>'
+         + '<section id=' + "'hn"+ num +"'" + 'style=' + "float:right;" + '>0</section>'
+         + '<img src=' + "'reviewdata\\img\\heart-empty.png'" + 'id=' +"'heart" + num + "'" + 'style=' + "width:20px;height:20px;float:right;" + '></button>'
+         +'<p style=' + "color:gray;" + '>' + now.getFullYear() + "." + (now.getMonth()+1) + "." +now.getDate() + "." + '</p>';
+   }
+   document.getElementById("nn").value = "";
+   document.getElementById("rp").value = "";
+   document.getElementById("p").value = "";
+}
+</script>
+</head>
+<body leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0">
+<div style ="width:100%;height:5%;position:fixed;left:0px;top:0px;background-color:#1FBC02;">
+<div style = "width:10%;left:0px;float:left;margin-left:15px;margin-top:11px;"><b>blog</b></div>
+<div style="width:80%;text-align:center;float:left;margin-top:11px;"><b>인어맨과 조개소년</b></div>
+</div>
+<div class="header">
+<center>
+<div style="font-size:20px; width:70% height:130px;">인어맨과 조개소년
+<section style="font-size:40px;"><b>유한정수제돈가스</b></section>
+<section style="font-size:20px;"><img src="reviewdata\\img\\인조.png" width="50px" height="50px">인어맨</section>
+</div>
+</center>
+<section style="font-size:20px;float:right;">URL 복사 <div style="border: 3px solid green;float:right;color:green;" onclick="plusnb()" id="pbb">+이웃추가</div></section>
+</div>
+<center>
+<div style="margin-top: 30px;">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.1227668254573!2d127.06933361565929!3d37.55217127980059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca4cfc3379687%3A0xa42feab9955fff47!2z66y07ZWc7KCV7IiY7KCc64-I6rmM7IqkIOq1sOyekOygkA!5e0!3m2!1sko!2skr!4v1543747955247" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe><br><br>
+<img src="reviewdata\\img\\리뷰1.jpg" width="773px" height="515px"><br>
+<p>인어맨은 돈까스를 참 좋아하는데요, 오늘은</p><p>세종대학교 후문에 위치한 유한정 수제 돈까스집에 가봤습니다!</p>
+<p>이전에도 몇 번 왔었지만 포스팅을 하는 건 처음입니다.</p><p>개인적으로 정말 애정하는 곳이라 포스팅을 꼭 하고 싶었는데 이제서야 하게 됬네요.</p>
+<img src="reviewdata\\img\\리뷰2.jpg" width="773px" height="515px"><br>
+<p>예전에는 무한리필이었지만 현재는 단품으로 판매를 하신다고 해요 ㅠ</p><p>아마 무한리필로 먹기에는 부담스러워 하시는 분들이 많아서 그런 것 같네요 ㅎㅎ</p>
+<img src="reviewdata\\img\\리뷰3.jpg" width="773px" height="515px"><br>
+<p>가격이 저렴하다고 안 좋은 재료를 쓰는 걸까요?</p><p style="color: red;"><b>아닙니다!</b></p>
+<p><i>국내산 생등심과 닭가슴살</i>을 사용하고, <i>떡갈비와 설렁탕도 한우</i>를 사용한다고 합니다.</p>
+<img src="reviewdata\\img\\리뷰4.jpg" width="773px" height="515px"><br>
+<p>김치랑 피클도 정말 맛있습니다!</p><p>직접 만들어서 그런지 감칠맛이 아주 좋더군요.</p>
+<img src="reviewdata\\img\\리뷰5.jpg" width="773px" height="515px"><br>
+<p><strong>두툼한 등심고기</strong>가 얇은 튀김옷 사이에 꽉 차있습니다.</p><p>분식집의 일반 돈까스 비주얼이 아니라 전문점에서 파는 것 같네요.</p>
+<img src="reviewdata\\img\\이모티콘.jpg" width="201px" height="157px"><br>
+<img src="reviewdata\\img\\리뷰6.jpg" width="773px" height="515px"><br>
+<p><strong style="color:green">떡갈비</strong>도 하나 먹어볼까요?</p><p><strong>두께가 진짜...</strong></p>
+<p>돈까스도 그렇고, 떡갈비도 그렇고 정말 완벽...</p><br><br>
+<img src="reviewdata\\img\\이모티콘1.jpg" width="181px" height="187px"><br>
+<p><strong>주인 아저씨와 아주머니도 정말 친절하시고 정직한 분들인 것 같아서 더욱 찾게 되는 곳 같습니다.</strong></p>
+<p><strong>맛과 푸짐함과 가격, 무엇 하나 빠지지 않는 수제돈까스! 강추합니다!!!</strong></p><br>
+</div>
+</center>
+<br><br><br>
+<table border="0" style = "margin:auto">
+<tr>
+<td><img src="reviewdata\\img\\방향-좌.png" style="width:50px;height:50px;" onclick="left()"></td>
+<td><img id = "img0" src="reviewdata\\img\\돈까스2.jpg" style="width:200px;height:200px;"></img></td>
+<td><img id = "img1" src="reviewdata\\img\\돈까스3.jpg" style="width:200px;height:200px;"></img></td>
+<td><img id = "img2" src="reviewdata\\img\\돈까스4.jpg" style="width:200px;height:200px;"></img></td>
+<td><img id = "img3" src="reviewdata\\img\\돈까스5.jpg" style="width:200px;height:200px;"></img></td>
+<td><img src="reviewdata\\img\\방향-우.png" style="width:50px;height:50px;" onclick="right()"></td>
+</tr>
+</table>
+<br><br><br>
+<center>
+<button type="button" value="예약하기" onclick = "goReserv()" style="background-color:#1FBC02;width:400px;height:100px; border:0px;font-size:30px;color:white;">실시간 예약</button>
+<div style="width:100%;height:60px;display:none" id="rsv">
+<br>
+<div style="width: 300px; height:300px;text-align:left;">
+인원(1~8) <input type='number' name='인원' min='1' max='8' value='2' id="rsvpeo" style="padding-left:5px;widht:200px;height:23px;">&nbsp;
+시간 선택 <select name="시간" id = "rsvtime" style="padding-left:5px;widht:200px;height:30px;">
+<option value="10:00">10:00<option value="11:00">11:00
+<option value="12:00">12:00<option value="13:00">13:00
+<option value="14:00">14:00<option value="15:00">15:00
+<option value="16:00">16:00<option value="17:00">17:00
+<option value="18:00">18:00<option value="19:00">19:00
+<option value="20:00">20:00<option value="21:00">21:00
+</select>
+<br><br>
+<center><input type = "button" value = "선택완료" onclick="reservation()"style="width:100px;height:50px;border:0px; font-size: 15px; background-color:#1FBC02"></center>
+</div>
+</div>
+<br><br><br><br><br><br>
+</center>
+<input type="text" id="nn" placeholder="닉네임" required style="border: 1.5px solid green;width:200px; height:40px; margin-left:50px;padding-left:10px; font-size:12px;">
+<input type="password" id = "p" placeholder="비밀번호" required style="border: 1.5px solid green;width:200px; height:40px; padding-left:10px; font-size:12px;">
+<input type="text" id="rp" placeholder="매너댓글 남겨주세요" required style="border: 1px solid green;width:418px; height:40px;padding-left:10px; font-size:12px;">
+<input type="button" value="등록" onclick="reply()"style="background-color: green;color:white;border: 0px;width:90px;height:45px;padding-left:10px; font-size:15px;">
+<br>
+<div id = "reply" style = "padding-left:20px;padding-right:20px;margin-left:50px;width:90%;height:320px;background-color:lightgray">
+<hr align="center"></hr>
+<img src="reviewdata\\img\\user.png" width="50px" height="50px">섹시한구릿빛피부
+<p>너무 맛있어보여요~</p>
+<button type="button" onclick="heart(0)"  style="float:right;background-color:white;">
+<section id="hn0" style="float:right;">0</section>
+<img src="reviewdata\\img\\heart-empty.png" id="heart0" style="width:20px;height:20px;float:right;" >
+</button>
+<p style="color:gray">2018.11.28.</p>
+<hr align="center"></hr>
+<img src="reviewdata\\img\\user.png" width="50px" height="50px">섹시한구릿빛피부
+<p>ㄹㅇ</p>
+<button type="button" onclick="heart(1)"  style="float:right;background-color:white;">
+<section id="hn1" style="float:right;">0</section>
+<img src="reviewdata\\img\\heart-empty.png" id="heart1" style="width:20px;height:20px;float:right;" >
+</button>
+<p style="color:gray">2018.11.28.</p>
+</div>
+</body>
+<br><br><br>
+</html>
